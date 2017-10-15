@@ -7,7 +7,21 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <TextBlock x:Name="title" HorizontalAlignment="Center" Margin="0,52,0,0" TextWrapping="Wrap" Text="Glazer Calculator" VerticalAlignment="Top" Width="398" FontFamily="Perpetua Titling MT" FontSize="36" RequestedTheme="Light"/>
+        <TextBox x:Name="widthTextBox" HorizontalAlignment="Left" Margin="740,196,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" LostFocus="widthTextBox_textChanged"/>
+        <TextBlock x:Name="widthLabel" HorizontalAlignment="Left" Margin="172,200,0,0" TextWrapping="Wrap" Text="Enter Width in Meters" VerticalAlignment="Top" FontFamily="Perpetua Titling MT" FontSize="24"/>
+        <TextBox x:Name="heightTextBox" HorizontalAlignment="Left" Margin="740,273,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" LostFocus="heightTextBox_textChanged"/>
+        <TextBlock x:Name="heightLabel" HorizontalAlignment="Left" Margin="172,277,0,0" TextWrapping="Wrap" Text="Enter Height in Meters" VerticalAlignment="Top" FontFamily="Perpetua Titling MT" FontSize="24"/>
+        <TextBlock x:Name="tintLabel" HorizontalAlignment="Left" Margin="172,356,0,0" TextWrapping="Wrap" Text="Select Tint" VerticalAlignment="Top" FontFamily="Perpetua Titling MT" FontSize="24"/>
+        <ComboBox x:Name="tintComboBox" HorizontalAlignment="Left" Margin="684,352,0,0" VerticalAlignment="Top" Width="120" FontFamily="Perpetua Titling MT">
+            <ComboBoxItem Content="Black"/>
+            <ComboBoxItem Content="Brown"/>
+            <ComboBoxItem Content="Blue"/>
+        </ComboBox>
+        <TextBlock x:Name="quantityLabel" HorizontalAlignment="Left" Margin="172,435,0,0" TextWrapping="Wrap" Text="Select Quantity" VerticalAlignment="Top" FontFamily="Perpetua Titling MT" FontSize="24"/>
+        <Slider x:Name="quantitySlider" HorizontalAlignment="Left" Margin="627,428,0,0" VerticalAlignment="Top" Width="177" Minimum="1" Maximum="20" LargeChange="2"/>
+        <Button x:Name="submitButton" Content="Submit" HorizontalAlignment="Left" Margin="684,510,0,0" VerticalAlignment="Top" Height="51" Width="120" FontFamily="Perpetua Titling MT" FontSize="24" Click="submitButton_click"/>
 
     </Grid>
 </Page>
